@@ -47,6 +47,20 @@ import {
     UpdateDocumentResponseSchema,
     UpdateDocumentRoute,
 } from '../model/UpdateDocument'
+import {
+    ReadDocumentRequest,
+    ReadDocumentRequestSchema,
+    ReadDocumentResponse,
+    ReadDocumentResponseSchema,
+    ReadDocumentRoute,
+} from '../model/ReadDocument'
+import {
+    ReadSessionRequest,
+    ReadSessionRequestSchema,
+    ReadSessionResponse,
+    ReadSessionResponseSchema,
+    ReadSessionRoute,
+} from '../model/ReadSession'
 
 export class Client {
 
@@ -130,6 +144,24 @@ export class Client {
             await this.request(
                 UpdateDocumentRoute,
                 UpdateDocumentRequestSchema.parse(requestBody)
+            )
+        )
+    }
+
+    async readDocument(requestBody: ReadDocumentRequest): Promise<ReadDocumentResponse> {
+        return ReadDocumentResponseSchema.parse(
+            await this.request(
+                ReadDocumentRoute,
+                ReadDocumentRequestSchema.parse(requestBody)
+            )
+        )
+    }
+
+    async readSession(requestBody: ReadSessionRequest): Promise<ReadSessionResponse> {
+        return ReadSessionResponseSchema.parse(
+            await this.request(
+                ReadSessionRoute,
+                ReadSessionRequestSchema.parse(requestBody)
             )
         )
     }
