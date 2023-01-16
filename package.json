@@ -1,0 +1,19 @@
+{
+    "name": "sharepad2-model",
+    "version": "1.0.0",
+    "description": "Model for Sharepad2",
+    "main": "./build/index.js",
+    "types": "./build/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "postinstall": "npm run build"
+    },
+    "keywords": [],
+    "author": "Malcolm Alvarez",
+    "license": "ISC",
+    "dependencies": {
+        "@types/node": "^18.11.18",
+        "typescript": "^4.9.4",
+        "zod": "^3.20.2"
+    }
+}
