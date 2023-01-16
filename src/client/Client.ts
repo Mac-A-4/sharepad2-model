@@ -89,7 +89,7 @@ export class Client {
         return CreateSessionResponseSchema.parse(
             await this.request(
                 CreateSessionRoute,
-                ConnectSessionRequestSchema.parse(requestBody)
+                CreateSessionRequestSchema.parse(requestBody)
             )
         )
     }
