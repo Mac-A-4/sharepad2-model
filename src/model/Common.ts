@@ -12,4 +12,4 @@ export const UserTokenSchema = z.string().regex(/^[0-9]{6}/)
 
 export const DocumentNameSchema = z.string().regex(/^\w{1,100}$/)
 
-export const DocumentDataSchema = z.string().regex(/^.{1,1000000}$/)
+export const DocumentDataSchema = z.string().regex(/^.{0,1000000}$/)
